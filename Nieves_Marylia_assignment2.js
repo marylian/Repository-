@@ -2,8 +2,20 @@ var myBudget; //Declaration of numeric variable
 var procedureFunc;
 var vehicleMake; //Declaration of string variable
 var gasMileage; //Declaration of numeric variable
-var carServiced=0;
+var booleanFunc;
+var booleanValue;
+var numberFunc;
 var mileService;
+var carList=["Z370", "Infinity 37S", "BMW 3 series", "Mercedes CLR"]; //Declaration of array
+var priceList=[50000, 48000, 33000, 60000]; //Declaration of array
+var arrayFunc;
+var stringFunc;
+var carServiced=0;
+var priceSum=0;
+var i;
+var j;
+var string1;
+var string2;
 
 procedureFunc=function(myBudget){ //Procedure without any return.
 if (myBudget<25000){ 
@@ -13,6 +25,7 @@ else {
     console.log("This is within my budget but I am not sure about the color"); //Output if condition is not met.
     }
 };
+
 
 booleanFunc=function(vehicleMake, gasMileage){ //Boolean function
  console.log("Which car is this and how much is the mileage?");
@@ -25,7 +38,7 @@ if (vehicleMake=="Hyundai" && gasMileage>="40"){ //Comparision operation
          return (booleanValue=false); // Boolean returned back.
      }
 };
-
+     
 numberFunc=function(carServiced){ //Number function
         var mileLimit=20000;     //Local variable for the number function.
         while (carServiced<mileLimit) { //while loop
@@ -34,6 +47,23 @@ numberFunc=function(carServiced){ //Number function
         }
         mileService=20000;
         return (mileService); //When the condition is not met, number is returned.
+};
+
+stringFunc=function(string1, string2){ //String function.
+    var i=string1.concat(string2); // String concatenation & var i is a local variable.
+    j=i;
+    return (j);    //String is returned back.
+};
+
+arrayFunc=function(carList, i){ // Array function.
+console.log ("Can you tell me the total amount for all these "+carList.length+" cars here");
+    for (var i=0; i<priceList.length; i++){ //Local variable declared & for loop present.
+        priceSum+=priceList[i]; //Math calculation.
+        j=i;
+    }
+    console.log("The total amount that you would pay for all these cars is $"+priceSum); //Output
+    return (carList[j]); //Returned array
+
 };
 
 
@@ -45,6 +75,15 @@ if (booleanValue==true){
 else{
     console.log("I would still like to see a Hyundai");
 } //End boolean function.
+
 numberFunc(0);{ //Number function with a number as an argument.
     console.log ("However, please do keep in mind that we will be providing you with a free service for "+mileService);
 }
+
+
+stringFunc("I would really like to buy", " a 370z, but its going to burn a hole in my pocket"); //String function with two string arguments.
+console.log(j); 
+
+
+arrayFunc(carList, 2); //Array function with a number and an array as an argument.
+console.log(carList[j]+" will cost you "+priceList[j]);
