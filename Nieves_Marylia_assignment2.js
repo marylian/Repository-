@@ -1,3 +1,10 @@
+//// Author: Marylia Nieves
+// Assignment : Deliverable 2 
+// Created for: SDI Online
+// Term: 1205
+//Date: 5-10-12
+
+
 var myBudget; //Declaration of numeric variable
 var procedureFunc;
 var vehicleMake; //Declaration of string variable
