@@ -1,4 +1,4 @@
-//// Author: Marylia Nieves
+// Author: Marylia Nieves
 // Assignment : Deliverable 2 
 // Created for: SDI Online
 // Term: 1205
